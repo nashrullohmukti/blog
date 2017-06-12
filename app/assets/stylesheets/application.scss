@@ -18,6 +18,9 @@
  @import 'bootstrap/theme';
 
 
+a{
+  text-decoration: none !important;
+}
  .alert-alert {
    @extend .alert-warning;
  }
