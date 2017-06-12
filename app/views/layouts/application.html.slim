@@ -13,6 +13,10 @@ html
           = link_to "41Blog", root_path, class: 'navbar-brand'
         ul.nav.navbar-nav
           li.active= link_to 'Home', root_path
+          - if user_signed_in?
+            - if can? :manage, :user
+              li= link_to 'Posts', posts_path
+            
         ul.nav.navbar-nav.pull-right
           - if user_signed_in?
             li.dropdown
